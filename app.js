@@ -1,12 +1,15 @@
+// registering express 
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+// the index route is the default route that is loaded when the app is started 
 var indexRouter = require('./routes/index');
+// more routes will be added here
 var audioRouter = require('./routes/audio');
-var videoRouter = require('./routes/audio');
+var videoRouter = require('./routes/video');
 
 
 var app = express();
@@ -22,7 +25,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+// the audio route is registered here
 app.use('/audio', audioRouter);
+// the video route is registered here
 app.use('/video', videoRouter);
 
 // catch 404 and forward to error handler
