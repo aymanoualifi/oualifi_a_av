@@ -1,44 +1,56 @@
-<!-- audio component -->
- <div class="audioComp">
-        <h2 class="audio11">Welcome to Audio Component</h2>
-</div>
-<div class="videobox">
-    <div class="video-wrapper">
-    <!-- linking audio file -->
-    <audio id="audio" src="/asset/audio/audio1.mp3" controls>
-        <track default kind="captions" srclang="en" src="/asset/audio_subtitle/audio2vtt.vtt" />
-    </audio>
-      <button class="transcript-btn">Show Transcript</button>
-</div>
-        <div class="box1">
-            <p class="main11">Our accessibility app features an audio component with easy-to-use controls that allow users to play and pause the audio, adjust the volume, and skip ahead or back. Additionally, the app includes a "Show Transcript" button that displays the transcript of the audio content on the screen. This feature is especially useful for users who are deaf or hard of hearing, or for those who prefer to read the content instead of listening to it. With these features, our app aims to provide an inclusive and accessible experience for all users.<p>
+<section id="audio">
+  <h2>Audio</h2>
+  <div class="audio__container">
+    <div class="audio__container__player">
+      <audio id="audioPlay">
+        <source src="/audio/audio.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="audio__controller__box" aria-label="Audio Player Controller">
+      <div class="audio__controller__up">
+        <div class="progress" aria-label="Progress Bar">
+          <progress id="progress" value="0" max="100"></progress>
         </div>
-
-      <section class="transcript hidden">
-        <h3 class="hidden">Transcript</h3>
-        <blockquote class="blockquote text-center">
-        <p class="mb-0">
-            <p>Some call me nature. </p>
-            <p>Others call me “Mother Nature.” </p>
-            <p>I’ve been here for over 4.5 billion years. </p>
-            <p>22,500 times longer than you. </p>
-            <p>I don’t really need people. </p>
-            <p>But people need me. </p>
-            <p>Yes, your future depends on me. </p>
-            <p>When I thrive, you thrive. </p>
-            <p>When I falter, you falter. Or worse. </p>
-            <p>But I’ve been here for eons. </p>
-            <p>I have fed species greater than you. </p>
-            <p>And I have starved species greater than you. </p>
-            <p>My oceans. My soil. My flowing streams. My forests. They all can take you. Or leave you. </p>
-            <p>How you choose to live each day, whether you regard or disregard me, doesn’t really matter to me. </p>
-            <p>One way. Or the other. </p>
-            <p>Your actions will determine your fate. Not mine. </p>
-            <p>I am nature. </p>
-            <p>I will go on. </p>
-            <p>I am prepared to evolve. </p>
-            <p>Are you?</p>
-        </p>
-        </blockquote>
-    </section>
+        <div class="magTextAudio">
+          <p aria-label="Current Time"> Current Time: 0:<span class="currentTime"></span> / 1:08 </p>
+          <p aria-label="Volume Level"> Volume Level: <span class="volumeLevel"></span></p>
+        </div>
+      </div>
+      <div class="audio__controller__down">
+        <button id="play" type="button" aria-label="Play Button" onkeydown="playVideo()">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="stop" type="button" aria-label="Stop Button" onkeydown="pauseVideo()">
+          <i class="fa-solid fa-stop"></i>
+        </button>
+        <button id="volup" type="button" aria-label="Volume Up Button" onkeydown="volumeUp()">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button id="voldown" type="button" aria-label="Volume Down Button" onkeydown="volumedown()">
+          <i class="fa-solid fa-volume-low"></i>
+        </button>
+      </div>
+    </div>
+    <div class="transcript">
+      <div id="transcriptBtn" aria-label="transcript Button" onkeydown="showTranscriptBox()">
+        <h4>Transcript</h4>
+      </div>
+      <div class="transcript__text" aria-label="transcript Text">
+        <h6>
+          [contemplative piano music] <br><br>
+          JANE AKINYI: My name is Jane Akinyi. I am a self-advocate from Kenya. I was born
+          with this intellectual disability. <br>
+          What I see, it is very, very few people understands people with intellectual disability. It's not many. Sometimes they're telling us, “You are stupid. You cannot be able to make decisions like other people.” <br>
+          When we can be able to speak up, we can able to tell them, “We have equal rights like you. We can able to make decision like you.”<br>
+          We have the right to be employment like other persons. We have right to live
+          independently like other persons.<br> <br>
+          VOICE-OVER: Where are you in your Journey to Inclusion? For more information, go to
+          DisabilityPhilanthropy.org, and promote using the hashtag DisabilityInclusion. Brought to you by the Presidents' Council on Disability Inclusion in Philanthropy.
+        </h6>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script src="/js/audio.js" type="module" defer></script>
