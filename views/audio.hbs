@@ -1,56 +1,43 @@
-<section id="audio">
-  <h2>Audio</h2>
-  <div class="audio__container">
-    <div class="audio__container__player">
-      <audio id="audioPlay">
-        <source src="/audio/audio.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-    <div class="audio__controller__box" aria-label="Audio Player Controller">
-      <div class="audio__controller__up">
-        <div class="progress" aria-label="Progress Bar">
-          <progress id="progress" value="0" max="100"></progress>
-        </div>
-        <div class="magTextAudio">
-          <p aria-label="Current Time"> Current Time: 0:<span class="currentTime"></span> / 1:08 </p>
-          <p aria-label="Volume Level"> Volume Level: <span class="volumeLevel"></span></p>
-        </div>
-      </div>
-      <div class="audio__controller__down">
-        <button id="play" type="button" aria-label="Play Button" onkeydown="playVideo()">
-          <i class="fa-solid fa-play"></i>
-        </button>
-        <button id="stop" type="button" aria-label="Stop Button" onkeydown="pauseVideo()">
-          <i class="fa-solid fa-stop"></i>
-        </button>
-        <button id="volup" type="button" aria-label="Volume Up Button" onkeydown="volumeUp()">
-          <i class="fa-solid fa-volume-high"></i>
-        </button>
-        <button id="voldown" type="button" aria-label="Volume Down Button" onkeydown="volumedown()">
-          <i class="fa-solid fa-volume-low"></i>
-        </button>
-      </div>
-    </div>
-    <div class="transcript">
-      <div id="transcriptBtn" aria-label="transcript Button" onkeydown="showTranscriptBox()">
-        <h4>Transcript</h4>
-      </div>
-      <div class="transcript__text" aria-label="transcript Text">
-        <h6>
-          [contemplative piano music] <br><br>
-          JANE AKINYI: My name is Jane Akinyi. I am a self-advocate from Kenya. I was born
-          with this intellectual disability. <br>
-          What I see, it is very, very few people understands people with intellectual disability. It's not many. Sometimes they're telling us, “You are stupid. You cannot be able to make decisions like other people.” <br>
-          When we can be able to speak up, we can able to tell them, “We have equal rights like you. We can able to make decision like you.”<br>
-          We have the right to be employment like other persons. We have right to live
-          independently like other persons.<br> <br>
-          VOICE-OVER: Where are you in your Journey to Inclusion? For more information, go to
-          DisabilityPhilanthropy.org, and promote using the hashtag DisabilityInclusion. Brought to you by the Presidents' Council on Disability Inclusion in Philanthropy.
-        </h6>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- audio component -->
+ <div class="audioComp">
+        <h2 class="audio11">Audio </h2>
+</div>
+<div class="videobox">
+    <div class="video-wrapper">
+    <!-- linking audio file -->
+    <audio id="audio" src="/asset/audio/radiohead.mp3" controls>
+        <track default kind="captions" srclang="en" src="/asset/audio_subtitle/audio2vtt.vtt" />
+    </audio>
+      <button class="transcript-btn">subtitles</button>
+</div>
+       
+      <section class="transcript hidden">
+        <h3 class="hidden">Transcript</h3>
+        <blockquote class="blockquote text-center">
+        <p class="mb-0">
+            <p>A heart that's full up like a landfill</p>
+        </p>A job that slowly kills you</p>
+<p>Bruises that won't heal</p>
+<p>You look so tired, unhappy</p>
+<p>Bring down the government</p>
+<p>They don't, they don't speak for us</p>
+<p>I'll take a quiet life</p>
+<p>A handshake of carbon monoxide</p>
+<p>And no alarms and no surprises</p>
+<p>No alarms and no surprises</p>
+<p>No alarms and no surprises</p>
+<p>Silent, silent</p>
+<p>This is my final fit</p>
+<p>My final bellyache</p>
+<p>With no alarms and no surprises</p>
+<p>No alarms and no surprises</p>
+<p>No alarms and no surprises, please</p>
+<p>Such a pretty house</p>
+<p>And such a pretty garden</p>
+<p>No alarms and no surprises (get me out of here)</p>
+<p>No alarms and no surprises (get me out of here)</p>
+<p>No alarms and no surprises, please (get me out of here) </p>
 
-<script src="/js/audio.js" type="module" defer></script>
+        </blockquote>
+    </section>
+</section>
